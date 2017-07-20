@@ -1,0 +1,20 @@
+.navigation{
+	.nav-band{
+		background-color: $nav-bar-color;
+		padding: 8px 0;
+		margin-bottom: 0;
+		.logo{
+			padding: 0 15px;
+			img{width: 120px;}
+		}
+	}
+	.breadcrumb-custom{
+		background-color: $breadcrumb-bg;
+		.breadcrumb{
+			margin-bottom: 0;
+			padding: 15px 0;
+			font-size: 1.5em;
+			font-family: $font-family-heading;
+		}
+	}
+}

@@ -1,0 +1,59 @@
+footer{
+	.hire-us{
+	padding: 20px 0;
+	background: #2d97de;
+	color: #fff;
+	.heading{
+		font-size: 3em;
+		color: #fff;
+		font-family: $font-family-heading;
+	}
+	.hire-btn{
+		-webkit-box-shadow: 0 23px 0 0 rgba(255, 255, 255, .12) inset;
+    	box-shadow: 0 23px 0 0 rgba(255, 255, 255, .12) inset;
+    	background-color: #060606;
+    	color: #fff;
+    	font-family: $font-family-heading;
+    	border: none;
+    	border-radius: 4px;
+	    box-shadow: 0 20px 0 0 rgba(255, 255, 255, .12) inset;
+	    -webkit-transition: all .3s ease;
+	    -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	    -o-transition: all .3s ease;
+	    transition: all .3s ease;
+	    padding: 10px 35px;
+	    text-transform: uppercase;
+	    font-size: 1.4em;
+	    &:hover{
+	    	-webkit-box-shadow: 0 46px 0 0 rgba(255, 255, 255, .12) inset;
+    		box-shadow: 0 46px 0 0 rgba(255, 255, 255, .12) inset;
+	    }
+	}
+}
+.footer{
+	background: $footer-bg;
+	color: #b8b8b8;
+	.logo{
+		cursor: pointer;
+	    filter: gray;
+	    filter: grayscale(1);
+	    -webkit-filter: grayscale(1);
+	    &:hover{
+	    	filter: none;
+		    -webkit-filter: grayscale(0);
+		    -webkit-animation: spin 2s infinite linear;
+		    animation: spin 2s infinite linear;
+	    }
+	}
+	a{text-decoration: none;color: #b8b8b8;}
+	.links{
+		font-size: 1.5em;
+		font-family: $font-family-heading;
+	}
+	.heading{
+		font-family: $font-family-heading;
+		color: #8c8c8e;
+	}
+}
+}

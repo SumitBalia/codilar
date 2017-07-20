@@ -1,0 +1,327 @@
+@import 'var';
+@import 'header';
+@import 'footer';
+
+body{font-family: $font-family-default; font-size: $default-font-size;}
+.modal.and.carousel {
+  position: fixed;
+}
+.banner-content{
+	.heading{
+		font-size: $banner-heading-text-size;
+		color: $heading-text-color;
+		font-family: $font-family-heading;
+		margin: 30px 0;
+	}
+	.content{
+		color: $content-color;
+		font-size: $content-text-size;
+	}
+}
+.title-section{
+	position: relative;
+	top: 0;
+	.title-band{
+		background-color: $title-band-color;
+		height: 60px;
+    	position: absolute;
+    	top: 32px;
+    	width: 100%;
+	}
+	.title-logo{
+		width: 30%;
+	}
+}
+.carousel-control.left,.carousel-control.right{
+	background-image: none;
+}
+.carousel-control{
+	top:25%;
+	height: 70px;
+	opacity: 1;
+}
+.carousel-control.left{
+	left: -22px
+}
+.features-section{
+	.modal-body{padding: 0px;}
+	.features-title{
+		&:after{
+			content: ' ';
+			width: 100px;
+			height: 2px;
+			display: inline-block;
+			background: #ccc;
+			position: relative;
+			top: -5px;
+    		left: 15px;
+		}
+	}
+	.key-features{
+		padding: 15px;
+	}
+	.feature-list{
+		padding-left: 0px;
+		margin: 20px 0;
+		list-style: none;
+		li{
+			margin-bottom: 10px;
+			font-size: 1.2em;
+			color: $content-color;
+			padding-left: 1em; 
+  			text-indent: -.8em;
+			&:before{
+  				content: "";
+			    margin-right: 8px;
+			    background-color: $color-orenge;
+			    width: 10px;
+			    height: 10px;
+			    display: inline-block;
+			    border-radius: 50px;
+			}
+		}
+	}
+	.screen-shot{
+		position: relative;
+		.shot{
+			position: absolute;
+    		right: 0px;
+    		top: 5px;
+		}
+		.nav-tabs{
+			li{
+				&.active{
+					a{
+						background-color: #f4906c;
+	    				border: 1px solid #f4906c;
+	    				color: #fff;
+					}
+				}
+				a{
+					color: #333;
+    				background: #e5e5e5;
+    				border-radius: 0px;
+    				padding: 3px 50px;
+    				font-size: 1.2em;
+				}
+			}
+		}
+		.tab-content{
+			margin-top: 10px;
+			.carousel-control{width: 7%;}
+			.item{
+				a{
+					&:hover{
+						img{border:1px solid $color-orenge;}
+					}
+				}
+			}
+			
+		}
+	}
+
+	a.custom-btn{@include buttons(#496db5,5px,30px,#fff);}
+	.extension-form{
+		@include linear-gradient(40deg,#e7906c,#cd73b6);
+		display: -webkit-flex;
+	    -webkit-flex-wrap: wrap;
+	    display: flex;   
+	    flex-wrap: wrap;
+	    justify-content: center;
+	    -webkit-justify-content: center;
+    	flex-direction: column;
+    	-webkit-flex-direction: column;
+		.price-box{
+			max-width: 280px;
+		    margin: 15px auto;
+		    .thumbnail{
+		    	padding: 15px;
+			    border: 0;
+			    border-radius: 0;
+			    box-shadow: 1px 5px 30px rgba(51, 51, 51, 0.3);
+		    }
+		}
+		.heading{
+			font-size: 1.2em;
+    		font-weight: 700;
+		}
+		.price{
+		    font-size: 1.8em;
+		    color: #496db5;
+		}
+		.pay-form{
+				.form-group {label{font-weight: 100 !important;}}
+			}
+		form{
+			margin-top: 30px;
+				input[type='text'],input[type='email'],input[type='password'],input[type='url'],select{
+			    @include inputs(none,0px,#efefef,0);
+			}
+			.regular-checkbox {
+				-webkit-appearance: none;
+				background-color: #fff;
+				border: 1px solid #cacece;
+				box-shadow: none;
+				padding: 9px;
+				border-radius: 0px;
+				display: inline-block;
+				position: relative;
+				&:checked{
+					background-color: #fff;
+					border: 1px solid #adb8c0;
+					box-shadow: none;
+					color: #325aaa;
+					&:after{
+						content: '\2714';
+						font-size: 14px;
+						position: absolute;
+						top: 0px;
+						left: 3px;
+						color: #325aaa;
+					}
+				}
+			}
+			.buy-now-btn{
+				font-size: 1.3em;
+			    background: #f4906c;
+			    border-radius: 0;
+			    color: #fff;
+			    margin-top: 16px;
+			    transition: all ease-out 0.3s;
+			    -webkit-transition: all ease-out 0.3s;
+			    &:hover{
+			    	transition: all ease-in 0.3s;
+			    	-webkit-transition: all ease-in 0.3s;
+			    	background: #fff;
+			    	color: #333;
+			    	border:1px solid #f4906c;
+			    }
+			}
+			.pay-now{
+				padding: 8px 40px;
+			}
+		}
+		.query{
+			text-align: center;
+			margin-bottom: 20px;
+			a{
+				text-decoration: none;
+			    color: #fff;
+			    opacity: 0.7;
+			    font-size: 1.2em;
+			}
+		}
+		.contact-btn{
+			box-shadow: 1px 5px 30px rgba(51, 51, 51, 0.3);
+			background: #fff;
+			text-transform: uppercase;
+			border-radius: 0px;
+			padding: 15px;
+			font-size: 1.2em;
+			color: #333;
+			font-weight: 700;
+			transition: all ease-out 0.3s;
+			-webkit-transition: all ease-out 0.3s;
+			&:hover{
+				background: transparent;
+				border: 1px solid #fff;
+				color: #fff;
+				transition: all ease-in 0.3s;
+			    -webkit-transition: all ease-in 0.3s;
+			}
+		}
+	}
+}
+.why-codilar{
+	.why-codilar-content{
+		position: relative;
+	    width: 100%;
+	    background: #efefef;
+	    padding: 30px;
+	    &:after{
+	    	display: block;
+			content: "";
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			top: -8px;
+			right: -8px;
+			border-top: 15px solid #f4906c;
+			border-right: 15px solid #f4906c;
+	    }
+	    .inner{
+	    	&:before{
+	    		display: block;
+			    content: "";
+			    width: 40px;
+			    height: 40px;
+			    position: absolute;
+			    bottom: -5px;
+			    left: -5px;
+			    border-bottom: 10px solid #f4906c;
+			    border-left: 10px solid #f4906c;
+	    	}
+	    	ul{
+	    		padding: 0;
+	    		list-style-type: none;
+	    		li{
+	    			font-size: 1.2em;
+	    			&:before{
+	    				content: "> ";
+	    				color: #f4906c;
+	    			}
+	    		}
+	    	}
+	    }
+
+	}
+	.star-bg{
+    	background: url(../images/codilar-star.png) center no-repeat;
+    	padding: 90px 0;
+    }
+
+}
+.contact-us{
+	background: url(../images/contact-us-bg.jpg) center no-repeat;
+	background-size: cover;
+	padding: 30px 0;
+	.heading{
+		text-align: center;
+		color: #fff;
+		font-size: 2em;
+		font-weight: 900;
+	}
+	.contact-form{
+		max-width: 700px;
+		margin: 30px auto;
+		color: #fff;
+		.form-control{
+			background: transparent;
+			border-radius: 0px;
+			margin: 5px 0;
+			color: #ccc;
+			border-color: #fff;
+		}
+		.submit-btn{
+			background: #ed6635;
+		    padding: 8px 60px;
+		    margin-top: 15px;
+		    text-transform: uppercase;
+		    font-size: 1.1em;
+		}
+	}
+}
+
+@media screen and (max-width: 768px){
+	.flex{
+		.col-md-4{width: 100%;}
+	}
+	.title-section{
+		.title-logo {
+		    width: 50%;
+		}
+	}
+	.features-section {
+		a.custom-btn{width: 100%;}
+	}
+}

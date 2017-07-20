@@ -1,0 +1,77 @@
+$font-family-heading: 'Patua One', sans-serif;
+$font-family-default: 'Roboto', sans-serif;
+$default-font-size: 14px;
+$banner-heading-text-size: 2.4em;
+$content-text-size: 15px;
+$heading-text-color: #000;
+$content-color: #545454;
+$bg-light-gray: #f7f7f7;
+$title-band-color: #f5f5f5;
+$sub-title: 2em;
+$color-orenge: #ed6635;
+$nav-bar-color: #fff;
+$breadcrumb-bg: #f5f5f5;
+$footer-bg: #444444;
+.mb30{margin-bottom: 30px;}
+.mtb15{margin: 15px 0;}
+.mt0{margin-top: 0px;}
+.mt10{margin-top: 10px;}
+.mt50{margin-top: 50px !important;}
+.p0{padding: 0px;}
+.pr0{padding-right: 0px}
+.text-orenge{color: $color-orenge}
+.light-gray-bg{background-color: $bg-light-gray;}
+.txt-blue{color: #496db5;}
+.clr-gray{color: #bebebe;}
+.flex{
+	display: -webkit-flex;
+    -webkit-flex-wrap: wrap;
+    display: flex;   
+    flex-wrap: wrap;
+}
+.flex-center{
+	justify-content: center;
+    -webkit-justify-content: center;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+}
+.sub-title{
+	font-size: $sub-title;
+	font-family: $font-family-heading;
+	color: $heading-text-color;
+}
+.modal-content{border-radius: 0;}
+
+@mixin linear-gradient($deg,$color-one, $color-two) {
+  background: $color-two;
+  background: -webkit-linear-gradient($deg,$color-one, $color-two);
+  background: -o-linear-gradient($deg,$color-one, $color-two);
+  background: -moz-linear-gradient($deg,$color-one, $color-two);
+  background: linear-gradient($deg,$color-one, $color-two);
+}
+@mixin buttons($bgcolor,$ptb,$plr,$color){
+	background-color: $bgcolor;
+	padding: $ptb $plr;
+	color: $color;
+	border-radius: 0px;
+}
+@mixin inputs($shadow,$border,$bg,$bradius){
+	box-shadow: $shadow;
+    border: $border;
+    background: $bg;
+    border-radius: $bradius;
+}
+@-webkit-keyframes spin {
+    100% { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    100% { -moz-transform: rotate(360deg); }
+}
+@keyframes spin {
+    100% {
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+.bg-gradient{@include linear-gradient(40deg,#e7906c,#cd73b6);}
